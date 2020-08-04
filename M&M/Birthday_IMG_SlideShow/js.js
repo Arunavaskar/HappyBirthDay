@@ -16,18 +16,18 @@ setTimeout(init, 1000);
 
 var odrag = document.getElementById('drag-container');
 var ospin = document.getElementById('spin-container');
-var aImg = document.getElementsByTagName('img');
-var aVid = document.getElementsByTagName('video');
+var aImg = ospin.getElementsByTagName('img');
+var aVid = ospin.getElementsByTagName('video');
 var aEle = [...aImg, ...aVid]; // combine 2 arrays
 
-// // Size of images
-// ospin.style.width = imgWidth + "px";
-// ospin.style.height = imgHeight + "px";
+// Size of images
+ospin.style.width = imgWidth + "px";
+ospin.style.height = imgHeight + "px";
 
 // Size of ground - depend on radius
-//var ground = document.getElementById('ground');
-document.getElementById('ground').style.width = radius * 3 + "px";
-document.getElementById('ground').style.height = radius * 3 + "px";
+var ground = document.getElementById('ground');
+ground.style.width = radius * 3 + "px";
+ground.style.height = radius * 3 + "px";
  
 function init(delayTime) {
   for (var i = 0; i < aEle.length; i++) {
